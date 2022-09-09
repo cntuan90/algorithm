@@ -1,0 +1,16 @@
+#### Method 1
+// when the user loses focus
+window.addEventListener("blur", () => {
+    document.title = "Breakup";
+});
+
+// when the user's focus is back to your tab (website) again
+window.addEventListener("focus", () => {
+    document.title = "Patch Up";
+});
+
+#### Method 2
+document.addEventListener("visibilitychange", () => {
+    // it could be either hidden or visible
+    document.title = document.visibilityState;    
+});
